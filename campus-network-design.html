@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Network Design - VLAN Segmentation, Subnetting, and Security Best Practices">
+  <title>Campus Network Design Project | Denzel Ochieng</title>
+  <link rel="stylesheet" href="%23style.css">
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #1A3C6E 0%, #065F46 100%);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-content {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.8;
+    }
+    .article-content h2 {
+      color: var(--clr-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--clr-accent);
+      padding-bottom: 0.5rem;
+    }
+    .article-content h3 {
+      color: var(--clr-primary);
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .highlight-box {
+      background: #F0F4FC;
+      border-left: 4px solid var(--clr-accent);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--clr-border);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .feature-card h4 {
+      color: var(--clr-accent);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .benefit-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .benefit-list li {
+      padding: 0.8rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .benefit-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--clr-accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .code-block {
+      background: #1A1A1A;
+      color: #E8A020;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+    }
+    .cta-section {
+      background: var(--clr-primary);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+    .cta-section h2 {
+      color: white;
+      border-bottom: none;
+      margin-bottom: 1.5rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--clr-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-btn:hover {
+      color: var(--clr-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <a href="projects.html" class="back-btn">← Back to Projects</a>
+      <h1>Campus Network Design</h1>
+      <p>Building Secure, Scalable, and Efficient Networks with VLAN Segmentation and Advanced Routing</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <article class="article-content">
+
+      <h2>Introduction: Why Campus Network Design Matters</h2>
+      <p>In today's digital-first educational and organizational environment, a well-designed campus network is the backbone of seamless operations. Whether you're managing a university, corporate campus, or multi-building facility, effective network design ensures reliable connectivity, optimal performance, and robust security.</p>
+      
+      <div class="highlight-box">
+        <strong>Did you know?</strong> A poorly designed campus network can result in bottlenecks, security vulnerabilities, increased downtime, and redundant costs. Strategic design prevents these issues before they occur.
+      </div>
+
+      <h2>Understanding Campus Network Architecture</h2>
+      <p>A modern campus network typically spans multiple buildings connected through high-speed backbone infrastructure. The key to success is designing a hierarchical architecture that balances performance, reliability, and scalability.</p>
+
+      <h3>The Three-Tier Hierarchy</h3>
+      <ul class="benefit-list">
+        <li><strong>Core Layer:</strong> High-speed backbone connecting all buildings with redundancy and failover capabilities</li>
+        <li><strong>Distribution Layer:</strong> Intermediate switches managing VLANs, routing, and network policies</li>
+        <li><strong>Access Layer:</strong> Edge switches in individual buildings/departments providing user connections</li>
+      </ul>
+
+      <h2>VLAN Segmentation: The Foundation of Modern Network Design</h2>
+      <p>Virtual Local Area Networks (VLANs) are critical for organizing networks logically. They improve security, reduce broadcast domains, and simplify network management across multiple buildings.</p>
+
+      <h3>Benefits of VLAN Segmentation</h3>
+      <ul class="benefit-list">
+        <li>Enhanced Security — Isolate sensitive departments (finance, HR) from general users</li>
+        <li>Reduced Broadcast Traffic — Limit broadcast storms to specific network segments</li>
+        <li>Simplified Management — Organize networks by department instead of physical location</li>
+        <li>Cost Efficiency — Require fewer routers by using VLAN routing instead of physical separation</li>
+        <li>Scalability — Easy to add new departments or users without restructuring</li>
+      </ul>
+
+      <h3>Example VLAN Configuration</h3>
+      <div class="highlight-box">
+        <strong>VLAN 10:</strong> Administration (VLAN ID: 10, Subnet: 192.168.10.0/24)<br>
+        <strong>VLAN 20:</strong> Faculty & Staff (VLAN ID: 20, Subnet: 192.168.20.0/24)<br>
+        <strong>VLAN 30:</strong> Students (VLAN ID: 30, Subnet: 192.168.30.0/24)<br>
+        <strong>VLAN 40:</strong> Guest Network (VLAN ID: 40, Subnet: 192.168.40.0/24)<br>
+        <strong>VLAN 50:</strong> IoT & Printers (VLAN ID: 50, Subnet: 192.168.50.0/24)
+      </div>
+
+      <h2>IP Subnetting: Efficient Address Space Allocation</h2>
+      <p>Proper subnetting ensures efficient use of IP address space and enables scalability. Using CIDR notation, we can allocate appropriate address ranges to each VLAN.</p>
+
+      <h3>Subnetting Strategy Example</h3>
+      <div class="code-block">
+Base Network: 192.168.0.0/16 (65,536 addresses)<br>
+<br>
+VLAN 10 - Admin:        192.168.10.0/24 (254 usable hosts)<br>
+VLAN 20 - Faculty:      192.168.20.0/24 (254 usable hosts)<br>
+VLAN 30 - Students:     192.168.30.0/24 (254 usable hosts)<br>
+VLAN 40 - Guest:        192.168.40.0/24 (254 usable hosts)<br>
+VLAN 50 - IoT:          192.168.50.0/24 (254 usable hosts)<br>
+      </div>
+
+      <h2>Routing Configuration: Connecting VLANs Together</h2>
+      <p>Inter-VLAN routing allows users on different VLANs to communicate securely and efficiently. This is typically handled by a Layer 3 switch or router.</p>
+
+      <h3>Static vs. Dynamic Routing</h3>
+      <ul class="benefit-list">
+        <li><strong>Static Routing:</strong> Manual configuration of routes, suited for smaller networks with few paths</li>
+        <li><strong>Dynamic Routing (OSPF/EIGRP):</strong> Automatic path discovery and adaptation, ideal for large, complex networks</li>
+      </ul>
+
+      <h2>Network Security Best Practices</h2>
+
+      <h3>Access Control Lists (ACLs)</h3>
+      <p>ACLs filter traffic between VLANs based on source IP, destination IP, and port numbers. They act as a first line of defense against unauthorized access.</p>
+
+      <div class="highlight-box">
+        <strong>Example ACL Rule:</strong> Allow Admin VLAN (192.168.10.0/24) to SSH into all servers. Deny Student VLAN from accessing servers on port 22.
+      </div>
+
+      <h3>Additional Security Layers</h3>
+      <ul class="benefit-list">
+        <li>Port Security — Prevent MAC address spoofing and unauthorized switch access</li>
+        <li>DHCP Snooping — Protect against rogue DHCP servers</li>
+        <li>Dynamic ARP Inspection (DAI) — Prevent ARP spoofing attacks</li>
+        <li>VPN & Encryption — Secure remote access and sensitive data transmission</li>
+        <li>802.1X Authentication — Control network access based on user credentials</li>
+      </ul>
+
+      <h2>High Availability and Redundancy</h2>
+
+      <h3>Redundant Connections</h3>
+      <p>Multiple links between buildings ensure network continuity if a single link fails. Using Spanning Tree Protocol (STP) prevents loops while maintaining redundancy.</p>
+
+      <h3>Load Balancing</h3>
+      <p>Distribute traffic across multiple links to optimize bandwidth utilization and prevent bottlenecks at critical points.</p>
+
+      <h2>Project Implementation: 3-Building Campus Example</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>🏢 Building A</h4>
+          <p><strong>Core Switch:</strong> Cisco Catalyst 3850<br><strong>Access Switches:</strong> 4x Catalyst 2960<br><strong>Users:</strong> 200<br><strong>VLANs:</strong> All 5</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>🏢 Building B</h4>
+          <p><strong>Core Switch:</strong> Cisco Catalyst 3850<br><strong>Access Switches:</strong> 3x Catalyst 2960<br><strong>Users:</strong> 150<br><strong>VLANs:</strong> All 5</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>🏢 Building C</h4>
+          <p><strong>Core Switch:</strong> Cisco Catalyst 3850<br><strong>Access Switches:</strong> 2x Catalyst 2960<br><strong>Users:</strong> 100<br><strong>VLANs:</strong> All 5</p>
+        </div>
+      </div>
+
+      <h3>Backbone Connectivity</h3>
+      <p>Buildings connected with 10 Gbps fiber optic cables in a redundant ring topology. Each building has two uplinks to ensure failover capability.</p>
+
+      <h2>Performance Optimization</h2>
+
+      <h3>QoS (Quality of Service)</h3>
+      <p>Prioritize network traffic based on application type. Video conferencing and VoIP get priority over file transfer, ensuring smooth real-time communication.</p>
+
+      <h3>Bandwidth Management</h3>
+      <p>Monitor and allocate bandwidth fairly across departments. Prevent a single department from consuming all available bandwidth.</p>
+
+      <h2>Monitoring and Maintenance</h2>
+
+      <h3>Network Monitoring Tools</h3>
+      <ul class="benefit-list">
+        <li>Cisco Prime Infrastructure — Device management and network analytics</li>
+        <li>NetFlow/sFlow — Traffic analysis and bandwidth utilization tracking</li>
+        <li>SNMP Monitoring — Real-time health checks and alerting</li>
+      </ul>
+
+      <h3>Regular Maintenance Schedule</h3>
+      <ul class="benefit-list">
+        <li>Daily: Monitor network health dashboards</li>
+        <li>Weekly: Review security logs and potential vulnerabilities</li>
+        <li>Monthly: Update firmware and security patches</li>
+        <li>Quarterly: Capacity planning and traffic analysis reviews</li>
+      </ul>
+
+      <h2>Simulation and Testing with Cisco Packet Tracer</h2>
+      <p>This project was designed and tested using Cisco Packet Tracer, a powerful network simulation tool that allows:</p>
+      <ul class="benefit-list">
+        <li>Full configuration of routers, switches, and end devices</li>
+        <li>Testing of VLAN segmentation without physical hardware</li>
+        <li>Verification of routing protocols and connectivity</li>
+        <li>Troubleshooting and optimization before deployment</li>
+        <li>Training and demonstration of network concepts</li>
+      </ul>
+
+      <h2>Future Enhancements and Scalability</h2>
+      <ul class="benefit-list">
+        <li><strong>Software-Defined Networking (SDN):</strong> Central control of network policies</li>
+        <li><strong>IPv6 Migration:</strong> Prepare for future IP address needs</li>
+        <li><strong>Network Function Virtualization (NFV):</strong> Virtualize security functions</li>
+        <li><strong>Wireless Integration:</strong> Seamless VLAN support for Wi-Fi</li>
+        <li><strong>Cloud Connectivity:</strong> VPN tunnels to cloud resources</li>
+      </ul>
+
+      <div class="cta-section">
+        <h2>Transform Your Network Infrastructure</h2>
+        <p>A well-designed campus network is an investment in reliability, security, and growth. Whether you're building from scratch or optimizing existing infrastructure, strategic planning pays dividends.</p>
+        <p>Learn how to design networks that scale, secure, and perform.</p>
+        <a href="contact.html" class="btn">Discuss Network Design Solutions</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

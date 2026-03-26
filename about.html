@@ -1,0 +1,84 @@
+<!-- Paste this into <!-- Paste this into EVERY HTML file and customise the <title> and <main> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of [denzel ochieng] — food science student at [Jomo kenyatta university of agriculture and technology]">
+  <title>[denzel ochieng] | Portfolio</title>
+  <link rel="stylesheet" href="%23style.css">
+</head>
+<body>
+
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="about-section">
+      <div class="container about-grid">
+
+        <aside>
+          <!-- Profile photo -->
+          <img src="images/profile.jpg"
+               alt="[Denzel Ochieng] — profile photo"
+               class="profile-img">
+          <h3>[Denzel Ochieng]</h3>
+          <p class="role">Food Science Student, Year 2</p>
+        </aside>
+
+        <div>
+          <h2>About Me</h2>
+          <p>[My name is Denzel Ochieng, a passionate Food Science student with a deep love for understanding the science behind what we eat. I am currently honing my skills in food processing, safety, nutrition, and product development, driven by the desire to create healthier, tastier, and more sustainable food solutions.
+    Whether it's in the lab or in the kitchen, I'm always exploring innovative ways to transform raw ingredients into meaningful food experiences that nourish both people and the planet.
+         .]</p>
+
+          <h3>Technical Skills</h3>
+          <ul class="skills-list">
+            <li>Computer Networking (OSI, TCP/IP, subnetting)</li>
+            <li>HTML5 & CSS3</li>
+            <li>Cisco Packet Tracer</li>
+            <li>Food Processing & Preservation Techniques</li>
+            <li>Food Safety and Quality Control (HACCP, GMP)</li>
+            <li>Food Chemistry & Analysis (pH, moisture, titration, spectroscopy)</li>
+            <li>Nutritional Analysis and Labeling</li>
+          </ul>
+
+          <h3>Education</h3>
+          <table>
+            <thead>
+              <tr><th>Qualification</th><th>Institution</th><th>Year</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>BSc food science</td><td>[Jomo kenyatta university of agriculture and technology]</td><td>2023–Present</td></tr>
+              <tr><td>KCSE</td><td>Ngere School</td><td>2022</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

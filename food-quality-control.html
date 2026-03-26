@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Food Quality Control System - IoT, AI, and Blockchain for Food Safety and Traceability">
+  <title>Smart Food Quality Control System | Denzel Ochieng</title>
+  <link rel="stylesheet" href="%23style.css">
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #1A3C6E 0%, #065F46 100%);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-content {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.8;
+    }
+    .article-content h2 {
+      color: var(--clr-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--clr-accent);
+      padding-bottom: 0.5rem;
+    }
+    .article-content h3 {
+      color: var(--clr-primary);
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .highlight-box {
+      background: #F0F4FC;
+      border-left: 4px solid var(--clr-accent);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--clr-border);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .feature-card h4 {
+      color: var(--clr-accent);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .benefit-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .benefit-list li {
+      padding: 0.8rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .benefit-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--clr-accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .cta-section {
+      background: var(--clr-primary);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+    .cta-section h2 {
+      color: white;
+      border-bottom: none;
+      margin-bottom: 1.5rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--clr-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-btn:hover {
+      color: var(--clr-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <a href="projects.html" class="back-btn">← Back to Projects</a>
+      <h1>Smart Food Quality Control System</h1>
+      <p>Building a Complete IoT, AI & Blockchain Solution for Food Safety and Traceability in Modern Supply Chains</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <article class="article-content">
+
+      <h2>Why Food Quality Control Matters More Than Ever</h2>
+      <p>Food safety incidents can lead to recalls, legal issues, health risks, and reputational damage. Globally, unsafe food causes over 600 million illnesses annually (WHO data). In Kenya and East Africa, fragmented supply chains and climate challenges make real-time monitoring essential.</p>
+      
+      <div class="highlight-box">
+        <strong>Did you know?</strong> A well-designed Food Quality Control System (FQCS) identifies hazards early, ensures compliance with local and international standards, optimizes operations, cuts costs, and provides end-to-end traceability from farm to fork.
+      </div>
+
+      <h2>Core Standards Every FQCS Must Follow</h2>
+      <p>Every effective system builds on internationally recognized frameworks:</p>
+
+      <h3>HACCP (Hazard Analysis and Critical Control Points)</h3>
+      <p>A preventive, science-based approach focusing on seven core principles:</p>
+      <ul class="benefit-list">
+        <li>Hazard Analysis</li>
+        <li>Critical Control Points (CCPs)</li>
+        <li>Establishment of Critical Limits</li>
+        <li>Monitoring Procedures</li>
+        <li>Corrective Actions</li>
+        <li>Verification Procedures</li>
+        <li>Record-Keeping & Documentation</li>
+      </ul>
+
+      <h3>ISO 22000 — Food Safety Management System (FSMS)</h3>
+      <p>A comprehensive, certifiable system that integrates HACCP with prerequisite programs and continual improvement. In Kenya, align your system with Kenya Bureau of Standards (KEBS) FSMS certification for local credibility and export readiness.</p>
+
+      <h2>System Architecture & Key Components</h2>
+      <p>The architecture of a modern IoT-enabled FQCS typically includes four integrated layers:</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>🔌 Sensing Layer</h4>
+          <p>IoT sensors for temperature, humidity, pH, ethylene gas, and microbial detection. Real-time data collection from storage, processing, and shipping environments.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>☁️ Network Layer</h4>
+          <p>Wi-Fi, LoRa, or 5G gateways transmitting sensor data securely to cloud platforms for centralized processing and storage.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>🧠 Processing Layer</h4>
+          <p>Cloud-based analytics engines using AI/ML for predictive analytics, shelf-life forecasting, anomaly detection, and automated compliance reporting.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>⛓️ Traceability Layer</h4>
+          <p>Blockchain technology for immutable, tamper-proof records. QR codes allow consumers to trace product journey from source to store.</p>
+        </div>
+      </div>
+
+      <h2>Key Features of a Smart FQCS</h2>
+      <ul class="benefit-list">
+        <li><strong>Real-time Monitoring & Alerts</strong> — SMS/email notifications when parameters exceed safe limits</li>
+        <li><strong>Predictive Analytics</strong> — AI forecasts spoilage and suggests corrective actions before problems occur</li>
+        <li><strong>Automated Compliance</strong> — Instant HACCP/ISO 22000 compliance dashboards and audit trails</li>
+        <li><strong>Blockchain Traceability</strong> — Scan a QR code to see the complete journey of any product batch</li>
+        <li><strong>Mobile & Web Dashboard</strong> — Accessible from anywhere (perfect for distributed Kenyan supply chains)</li>
+        <li><strong>ERP Integration</strong> — Seamless integration with existing manufacturing and inventory systems</li>
+        <li><strong>Automated Reporting</strong> — Generate compliance reports for regulators in minutes, not days</li>
+      </ul>
+
+      <h2>Step-by-Step Implementation Guide</h2>
+
+      <h3>Phase 1: Planning (1–2 weeks)</h3>
+      <p>Conduct hazard analysis (HACCP Principle 1) and define key performance indicators (KPIs) for your operation.</p>
+
+      <h3>Phase 2: Hardware Selection</h3>
+      <p>Choose IoT components—Arduino/Raspberry Pi for prototypes, industrial-grade sensors for production environments. Select DHT-11 sensors for temperature/humidity, gas sensors for spoilage detection, and pH probes for beverage/food processing.</p>
+
+      <h3>Phase 3: Software Development</h3>
+      <p>Deploy dashboards using platforms like Thingspeak, AWS IoT, or open-source solutions. Develop custom mobile apps for on-the-go monitoring and alerts.</p>
+
+      <h3>Phase 4: Integration & Testing</h3>
+      <p>Link the system with existing processes and run pilot tests in one warehouse or production line before full rollout.</p>
+
+      <h3>Phase 5: Training & Rollout</h3>
+      <p>Train staff on system usage, data interpretation, and corrective action protocols. Go live with monitoring across your facility.</p>
+
+      <h3>Phase 6: Continuous Improvement</h3>
+      <p>Use data analytics for optimization. Conduct annual audits and update the system based on regulatory changes and industry best practices.</p>
+
+      <div class="highlight-box">
+        <strong>Pro Tip:</strong> Start small (one warehouse or production line) and scale using modular components. This reduces risk and allows for iterative improvements.
+      </div>
+
+      <h2>Real-World Benefits & ROI</h2>
+      <p>Businesses using digital FQCS report impressive results:</p>
+      <ul class="benefit-list">
+        <li>30–50% reduction in food waste</li>
+        <li>Faster recall response (hours instead of days)</li>
+        <li>Improved supplier accountability and transparency</li>
+        <li>Higher customer satisfaction and brand trust</li>
+        <li>Export readiness for international markets</li>
+        <li>Lower operational costs through optimization</li>
+        <li>Full compliance with KEBS and international standards</li>
+      </ul>
+
+      <h2>Kenya & East Africa Context</h2>
+      <p>Kenya's food control system is multi-sectoral, with KEBS (Kenya Bureau of Standards) playing a central role. Aligning your FQCS with KEBS FSMS certification opens doors to regional markets and international exports. Many Kenyan firms (Kenya Breweries Ltd, Kakuzi Ltd, etc.) are already certified and gain significant competitive advantages.</p>
+
+      <h2>Technology Stack Example</h2>
+      <div class="highlight-box">
+        <strong>Hardware:</strong> Arduino/Raspberry Pi, DHT sensors, MQ gas sensors, pH probes, ESP8266 Wi-Fi modules<br>
+        <strong>Connectivity:</strong> Wi-Fi/LoRa/5G<br>
+        <strong>Cloud:</strong> AWS IoT, Azure IoT Hub, or Thingspeak<br>
+        <strong>Analytics:</strong> Python/TensorFlow for AI models<br>
+        <strong>Blockchain:</strong> Hyperledger Fabric or Ethereum for supply chain traceability<br>
+        <strong>Frontend:</strong> React/Vue.js dashboards, React Native mobile apps
+      </div>
+
+      <h2>Getting Started</h2>
+      <ul class="benefit-list">
+        <li>Download free HACCP templates from FDA</li>
+        <li>Explore open-source IoT projects on Hackster.io</li>
+        <li>Contact KEBS for certification guidance and local compliance</li>
+        <li>Research Arduino IoT food monitoring starter kits</li>
+        <li>Study best practices in Food QA/QC from industry leaders</li>
+      </ul>
+
+      <div class="cta-section">
+        <h2>Ready to Transform Your Food Business?</h2>
+        <p>A smart Food Quality Control System is no longer optional—it's your competitive edge in the modern food industry.</p>
+        <p>By blending HACCP/ISO standards with IoT, AI, and blockchain, you create a future-proof operation that protects consumers and boosts profitability.</p>
+        <a href="contact.html" class="btn">Get In Touch to Discuss Your Project</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

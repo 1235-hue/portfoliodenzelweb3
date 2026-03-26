@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio Website - Building a Professional Web Presence with HTML5, CSS3, and Best Practices">
+  <title>Personal Portfolio Website | Denzel Ochieng</title>
+  <link rel="stylesheet" href="%23style.css">
+  <style>
+    .article-header {
+      background: linear-gradient(135deg, #1A3C6E 0%, #065F46 100%);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .article-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .article-content {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.8;
+    }
+    .article-content h2 {
+      color: var(--clr-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--clr-accent);
+      padding-bottom: 0.5rem;
+    }
+    .article-content h3 {
+      color: var(--clr-primary);
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .highlight-box {
+      background: #F0F4FC;
+      border-left: 4px solid var(--clr-accent);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: white;
+      border: 1px solid var(--clr-border);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .feature-card h4 {
+      color: var(--clr-accent);
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .benefit-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .benefit-list li {
+      padding: 0.8rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .benefit-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--clr-accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .code-block {
+      background: #1A1A1A;
+      color: #E8A020;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+    }
+    .cta-section {
+      background: var(--clr-primary);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+    .cta-section h2 {
+      color: white;
+      border-bottom: none;
+      margin-bottom: 1.5rem;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--clr-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-btn:hover {
+      color: var(--clr-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="article-header">
+    <div class="container">
+      <a href="projects.html" class="back-btn">← Back to Projects</a>
+      <h1>Personal Portfolio Website</h1>
+      <p>Building a Professional Web Presence with Pure HTML5 & CSS3: A Complete Student Developer Guide</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <article class="article-content">
+
+      <h2>Why Your Portfolio Website Matters</h2>
+      <p>In today's digital economy, your online presence is often your first impression. Whether you're a student, job seeker, freelancer, or established professional, a personal portfolio website is essential for showcasing your work, skills, and personality to potential employers, clients, and collaborators.</p>
+      
+      <div class="highlight-box">
+        <strong>Did you know?</strong> 92% of employers use LinkedIn or visit a candidate's website during recruitment. A well-designed portfolio website can be the deciding factor between getting hired or passed over.
+      </div>
+
+      <h2>The Power of a Self-Built Portfolio</h2>
+      <p>Building your own portfolio from scratch with HTML5 and CSS3 demonstrates several key skills to potential employers:</p>
+      <ul class="benefit-list">
+        <li><strong>Front-End Development Skills:</strong> Shows you understand web fundamentals</li>
+        <li><strong>Design Thinking:</strong> Demonstrates your ability to create user-friendly interfaces</li>
+        <li><strong>Problem-Solving:</strong> Proves you can take a project from concept to completion</li>
+        <li><strong>Attention to Detail:</strong> A polished site reflects professional standards</li>
+        <li><strong>Initiative:</strong> Taking charge of your digital presence is impressive</li>
+      </ul>
+
+      <h2>Core Web Technologies: HTML5 & CSS3</h2>
+      <p>This portfolio was built using pure, semantic HTML5 and modern CSS3—no frameworks, no bloat. Here's why that matters:</p>
+
+      <h3>HTML5 Benefits</h3>
+      <ul class="benefit-list">
+        <li>Semantic Elements — Better structure with &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt;</li>
+        <li>Accessibility — Screen readers and assistive technologies understand your content better</li>
+        <li>SEO-Friendly — Search engines prefer semantic, well-structured markup</li>
+        <li>Future-Proof — HTML5 is the current standard and will remain the foundation of the web</li>
+      </ul>
+
+      <h3>CSS3 Modern Styling</h3>
+      <ul class="benefit-list">
+        <li>Flexbox — Powerful layout system for responsive design</li>
+        <li>CSS Grid — Advanced layout control for complex designs</li>
+        <li>Custom Properties (Variables) — Centralized color management and theming</li>
+        <li>Gradients & Shadows — Professional visual effects without images</li>
+        <li>Transitions & Transforms — Smooth, performant animations</li>
+      </ul>
+
+      <h2>Key Features of a Winning Portfolio</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>🎯 Clear Navigation</h4>
+          <p>Intuitive menu structure helps visitors quickly find what they're looking for. A sticky header keeps navigation accessible as users scroll.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>📱 Responsive Design</h4>
+          <p>Looks great on smartphones, tablets, and desktops. Mobile-first approach ensures functionality on all devices.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>💡 Hero Section</h4>
+          <p>A bold, attention-grabbing introduction that immediately tells visitors who you are and what you do.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>📂 Organized Projects</h4>
+          <p>Well-designed project cards showcase your work with descriptions, technologies, and links to full details.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>👤 About Page</h4>
+          <p>Personal introduction with skills, education, and experience. Helps employers understand your background.</p>
+        </div>
+
+        <div class="feature-card">
+          <h4>📧 Contact Form</h4>
+          <p>Easy way for interested parties to reach out. Professional communication channel.</p>
+        </div>
+      </div>
+
+      <h2>Portfolio Structure Breakdown</h2>
+
+      <h3>Home Page (Index.html)</h3>
+      <p>Your landing page should immediately communicate your value proposition. Include:</p>
+      <ul class="benefit-list">
+        <li>A compelling headline and tagline</li>
+        <li>Brief introduction of who you are</li>
+        <li>Call-to-action buttons (View Projects, Get In Touch)</li>
+        <li>Quick overview of featured projects</li>
+      </ul>
+
+      <h3>About Page</h3>
+      <p>Tell your story and build connection with visitors:</p>
+      <ul class="benefit-list">
+        <li>Professional profile photo (ideally 160x160px, circular)</li>
+        <li>Personal bio explaining your passion and goals</li>
+        <li>Skills list with relevant competencies</li>
+        <li>Education timeline showing qualifications</li>
+      </ul>
+
+      <h3>Projects Page</h3>
+      <p>Showcase your work with project cards featuring:</p>
+      <ul class="benefit-list">
+        <li>Category tag (Networking, Web Dev, Database, etc.)</li>
+        <li>Project title and brief description</li>
+        <li>Technologies used (implicit in description)</li>
+        <li>Link to detailed project article</li>
+      </ul>
+
+      <h3>Contact Page</h3>
+      <p>Make it easy for people to reach you:</p>
+      <ul class="benefit-list">
+        <li>Contact form with essential fields (Name, Email, Subject, Message)</li>
+        <li>Input validation for better user experience</li>
+        <li>Clear call-to-action</li>
+        <li>Alternative contact methods (if desired)</li>
+      </ul>
+
+      <h2>CSS Architecture: The Power of Custom Properties</h2>
+      <p>This portfolio uses CSS custom properties (variables) for centralized styling:</p>
+
+      <div class="code-block">
+:root {<br>
+  --clr-primary:  #1A3C6E;   // Main brand color<br>
+  --clr-accent:   #E8A020;   // Highlights<br>
+  --clr-text:     #1A1A1A;   // Text color<br>
+  --clr-bg:       #F0F4FC;   // Background<br>
+  --radius:       10px;       // Border radius<br>
+  --shadow:       0 2px 10px rgba(0,0,0,0.07);<br>
+}<br>
+      </div>
+
+      <p>This approach makes it incredibly easy to change your entire color scheme—just update the variables, and the entire site transforms!</p>
+
+      <h2>Responsive Design Techniques</h2>
+
+      <h3>The Mobile-First Approach</h3>
+      <ul class="benefit-list">
+        <li>Design for mobile first, then enhance for larger screens</li>
+        <li>Use media queries to adjust layouts responsively</li>
+        <li>Test on various device sizes (375px to 2560px width)</li>
+      </ul>
+
+      <h3>Key Responsive Techniques Used</h3>
+      <ul class="benefit-list">
+        <li><strong>Flexible Layout:</strong> Percentage-based widths and max-widths</li>
+        <li><strong>CSS Grid:</strong> Auto-fit responsive grid for projects</li>
+        <li><strong>Flexbox:</strong> Flexible horizontal and vertical alignment</li>
+        <li><strong>Viewport Meta Tag:</strong> Proper device scaling</li>
+      </ul>
+
+      <h2>Accessibility: Building for Everyone</h2>
+      <p>A truly professional portfolio is accessible to all users, including those with disabilities:</p>
+      <ul class="benefit-list">
+        <li><strong>Skip Links:</strong> Allow keyboard users to skip to main content</li>
+        <li><strong>Semantic HTML:</strong> Screen readers understand structure better</li>
+        <li><strong>Color Contrast:</strong> Text is readable against backgrounds</li>
+        <li><strong>Alt Text:</strong> Images have descriptive alternatives</li>
+        <li><strong>Keyboard Navigation:</strong> All features work with keyboard alone</li>
+      </ul>
+
+      <h2>Performance Optimization</h2>
+
+      <h3>Fast Loading Times</h3>
+      <ul class="benefit-list">
+        <li>Lightweight CSS (minimal bloat, no unused styles)</li>
+        <li>Optimized images (compressed, right format)</li>
+        <li>No render-blocking JavaScript</li>
+        <li>Minimal HTTP requests</li>
+      </ul>
+
+      <h3>Page Speed Metrics</h3>
+      <p>A well-built portfolio should achieve:</p>
+      <ul class="benefit-list">
+        <li>First Contentful Paint (FCP) under 1.5 seconds</li>
+        <li>Largest Contentful Paint (LCP) under 2.5 seconds</li>
+        <li>Cumulative Layout Shift (CLS) under 0.1</li>
+        <li>Overall Lighthouse score above 90</li>
+      </ul>
+
+      <h2>Deployment & Going Live</h2>
+
+      <h3>GitHub Pages (Free Hosting)</h3>
+      <p>The easiest way for students to deploy a portfolio:</p>
+      <ol style="margin-left: 2rem;">
+        <li>Create a GitHub account</li>
+        <li>Create a repository named `yourusername.github.io`</li>
+        <li>Push your HTML files to the repository</li>
+        <li>Your site is live at `https://yourusername.github.io`</li>
+      </ol>
+
+      <h3>Custom Domain (Optional)</h3>
+      <p>For about $10/year, you can use a custom domain like `denzelochieng.com` and point it to your GitHub Pages site.</p>
+
+      <h2>SEO: Making Your Portfolio Discoverable</h2>
+
+      <h3>Search Engine Optimization Basics</h3>
+      <ul class="benefit-list">
+        <li><strong>Meta Descriptions:</strong> Compelling descriptions in search results</li>
+        <li><strong>Semantic HTML:</strong> Google understands your content better</li>
+        <li><strong>Keywords:</strong> Natural use of relevant search terms</li>
+        <li><strong>Mobile-Friendly:</strong> Mobile-first indexing by search engines</li>
+        <li><strong>Fast Loading:</strong> Site speed is a ranking factor</li>
+      </ul>
+
+      <h2>Continuous Improvement</h2>
+
+      <h3>Regular Updates</h3>
+      <ul class="benefit-list">
+        <li>Add new projects as you complete them</li>
+        <li>Update your skills and experience</li>
+        <li>Refresh content seasonally</li>
+        <li>Monitor analytics to understand visitor behavior</li>
+      </ul>
+
+      <h3>Future Enhancements</h3>
+      <ul class="benefit-list">
+        <li><strong>JavaScript Interactivity:</strong> Add smooth scrolling, animations</li>
+        <li><strong>Dark Mode:</strong> CSS variables make this easy</li>
+        <li><strong>Blog Section:</strong> Share articles and insights</li>
+        <li><strong>Frontend Framework:</strong> Graduate to React or Vue.js</li>
+      </ul>
+
+      <h2>Real-World Impact</h2>
+      <p>A professional portfolio website leads to:</p>
+      <ul class="benefit-list">
+        <li>Job offers and career opportunities</li>
+        <li>Freelance clients and projects</li>
+        <li>Networking and professional connections</li>
+        <li>Speaking opportunities and recognition</li>
+        <li>Personal brand building</li>
+      </ul>
+
+      <div class="cta-section">
+        <h2>Launch Your Professional Web Presence</h2>
+        <p>Your portfolio website is more than just a resume—it's a living representation of your skills, creativity, and professionalism.</p>
+        <p>Start building, keep improving, and watch opportunities come your way.</p>
+        <a href="contact.html" class="btn">Discuss Your Project Ideas</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- Paste this into EVERY HTML file and customise the <title> and <main> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of [denzel ochieng] — food science student at [Jomo kenyatta university of agriculture and technology]">
+  <title>[denzel ochieng] | Portfolio</title>
+  <link rel="stylesheet" href="%23style.css">
+</head>
+<body>
+
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="projects-section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="cards">
+
+          <!-- Repeat this <article> block for each project (minimum 3) -->
+          <article class="card">
+            <span class="card-tag">Networking</span>
+            <h3>Campus Network Design</h3>
+            <p>Designed a VLAN-segmented network for a 3-building campus
+            in Cisco Packet Tracer. Includes full subnetting plan,
+            routing configuration, and security rules.</p>
+            <a href="campus-network-design.html" class="card-link">View Details →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Web Dev</span>
+            <h3>Personal Portfolio Website</h3>
+            <p>This responsive portfolio built with pure HTML5 and CSS3
+            as part of ICS 2215. Deployed live on GitHub Pages
+            with HTTPS enabled.</p>
+            <a href="personal-portfolio.html" class="card-link">View Live →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-tag">Database</span>
+            <h3>Smart Food Quality Control System</h3>
+            <p>IoT-enabled FQCS combining HACCP/ISO 22000 standards with real-time monitoring, AI-powered predictive analytics, and blockchain traceability. Features environmental sensors, automated HACCP compliance dashboards, mobile alerts, and full supply chain visibility from farm to fork. Reduces waste by 30-50% and ensures KEBS certification readiness for East African exports.</p>
+            <a href="food-quality-control.html" class="card-link">Details →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

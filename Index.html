@@ -1,0 +1,56 @@
+<!-- Paste this into EVERY HTML file and customise the <title> and <main> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- REQUIRED for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of [denzel ochieng] — food science student at [Jomo kenyatta university of agriculture and technology]">
+  <title>[denzel ochieng] | Portfolio</title>
+  <link rel="stylesheet" href="%23style.css">
+</head>
+<body>
+
+  <!-- Skip link: allows keyboard users to skip the nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">[denzel ochieng]</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <!-- Add class="active" to the current page's link -->
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Hi, I'm <span class="accent">[denzel ochieng]</span></h1>
+        <p class="tagline">Food Science Student · AFS 2215 · [Jomo Kenyatta University of Agriculture and Technology]</p>
+        <p>Passionate about food safety and nutrition.</p>
+        <div class="hero-btns">
+          <a href="projects.html" class="btn">View My Projects</a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> [denzel ochieng] — AFS 2215, Dept. of Agriculture</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+    </div>
+  </div>
+</section>
